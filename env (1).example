@@ -1,0 +1,9 @@
+# The BattleMetrics server ID (from the URL, e.g. battlemetrics.com/servers/rust/16647013 -> 16647013)
+BATTLEMETRICS_SERVER_ID=16647013
+
+# Discord webhook URL (Server Settings -> Integrations -> Webhooks -> New Webhook -> Copy URL)
+DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your-id/your-token
+
+# How often to poll BattleMetrics, in milliseconds. 60000 = 1 minute.
+# Don't go much below 30000 (30s) to stay polite to the public API.
+POLL_INTERVAL_MS=60000

@@ -23,7 +23,12 @@ let lastError = null;
  */
 async function fetchServerState() {
   const res = await fetch(BM_URL, {
-    headers: { Accept: 'application/json' },
+    headers: {
+      Accept: 'application/json',
+      // BattleMetrics' bot protection rejects requests without a browser-like User-Agent
+      'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    },
   });
 
   if (!res.ok) {
